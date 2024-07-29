@@ -4,27 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/style_zero.css" />
-
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>jackboxgames</title>
   </head>
   <body>
-    <header class="header">
-      <p class="header--text">Header</p>
+    <div class="bg-header"></div>
+    <header data-header class="header">
+      <nav class="header--nav">
+        <a href="#" class="header--logo">
+          <svg class="header--logo-icon">
+            <use href="./icons/sprite-logo.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="header--list">
+          <li class="header--item">
+            <a href="#" class="header--link">Games</a>
+          </li>
+          <li class="header--item">
+            <a href="#" class="header--link">How To Play</a>
+          </li>
+          <li class="header--item">
+            <a href="#" class="header--link">Company</a>
+          </li>
+          <li class="header--item">
+            <button class="header--button">
+              <svg class="header--button-icon">
+                <use href="./icons/system-icons/busket.svg#busket"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
-      <section class="hero">
-        <h1 class="hero--title">Hero</h1>
-        <p class="hero-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum,
-          dignissimos magni qui consectetur quidem ipsam atque id sequi ea
-          delectus dolore tempora laboriosam rerum nam nesciunt cum debitis
-          natus, totam obcaecati ab! Dolorum eius totam illo quae perferendis,
-          aperiam illum deserunt quo optio laudantium necessitatibus. Corporis
-          vel recusandae enim reprehenderit.
-        </p>
-      </section>
+      <section class="hero"></section>
     </main>
     <footer class="footer"></footer>
     <script src="./scripts/script.js"></script>

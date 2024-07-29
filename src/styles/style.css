@@ -1,5 +1,130 @@
-body {
-  font-family: "Inter";
+html {
+  font-size: 16px;
 }
 
-/*# sourceMappingURL=style.css.map */
+body {
+  font-family: "Inter";
+  background-color: #2c2c2c;
+}
+
+.container {
+  width: 100vw;
+  padding: 0 calc((100vw - 1400px) / 2);
+}
+
+* {
+  color: #e7eaee;
+}
+*:focus-visible {
+  background-color: bisque;
+  outline: 3px solid red;
+  outline-offset: 3px;
+}
+
+.bg-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.64) 0%, rgba(0, 0, 0, 0) 100%);
+  background-color: #20242b;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 88px;
+  padding: 16px 60px 16px 80px;
+  transition: 0.4s;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #14161d 0%, #1a1f26 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.4s;
+}
+.header .header--nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.header .header--logo {
+  height: 100%;
+  padding: 8px 0;
+  fill: white;
+  border-radius: 8px;
+  transition: fill 0.2s;
+}
+.header .header--logo:hover {
+  fill: #404560;
+}
+.header .header--logo:active {
+  fill: #ff7efa;
+}
+.header .header--logo-icon {
+  height: 100%;
+  max-width: 108px;
+}
+.header .header--list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header .header--item {
+  color: white;
+}
+.header .header--link {
+  font-size: 1.125rem;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.header .header--link:hover {
+  background-color: #404560;
+}
+.header .header--link:active {
+  color: #ff7efa;
+}
+.header .header--button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+.header .header--button-icon {
+  height: 28px;
+  width: 28px;
+  fill: white;
+  transition: fill 0.2s;
+}
+.header .header--button-icon:hover {
+  fill: #404560;
+}
+.header .header--button-icon:active {
+  fill: #ff7efa;
+}
+
+.scrolled::before {
+  opacity: 1;
+}
+
+.hero--text {
+  margin-top: 400px;
+}/*# sourceMappingURL=style.css.map */
