@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Tilt Neon";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./tilt-neon400.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./tilt-neon.woff2) format("woff2");
+}
