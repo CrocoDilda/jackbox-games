@@ -173,12 +173,6 @@
       font-style: oblique;
     }
 
-    .content--description {
-    }
-
-    .content--icon {
-    }
-
     .content--button {
       display: flex;
       justify-content: space-between;
@@ -208,6 +202,21 @@
     .content--button-icon {
       height: 18px;
       width: 28px;
+    }
+
+    .video-content--link {
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-content--Logo {
+      width: 60%;
+      margin: auto;
+    }
+
+    .video-content--button {
+      background: linear-gradient(180deg, #c4cbff 0%, #8f9cff 100%);
+      justify-content: center;
     }
   }
 }
