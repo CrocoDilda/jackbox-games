@@ -4,7 +4,11 @@ html {
 
 body {
   font-family: "Inter";
-  background-color: #2c2c2c;
+  overflow-x: hidden;
+  background: url(../images/homepage/sparkle-bg.png);
+  background-attachment: fixed;
+  background-color: #181c23;
+  height: 500vh;
 }
 
 .container {
