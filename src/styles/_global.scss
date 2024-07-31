@@ -8,7 +8,6 @@ body {
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
   background-color: #181c23;
-  height: 500vh;
 }
 
 .container {
@@ -19,10 +18,14 @@ body {
 * {
   color: $neutral-100;
   &:focus-visible {
-    background-color: bisque;
-    outline: 3px solid red;
+    outline: 3px solid white !important;
     outline-offset: 3px;
   }
+}
+
+a,
+button {
+  border-radius: 6px;
 }
 
 .bg-header {

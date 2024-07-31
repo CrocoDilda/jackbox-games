@@ -52,6 +52,15 @@
     transform: scale(1.05);
     outline: 2px solid white;
   }
+  & a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    &:focus-visible {
+      border: 3px solid white !important;
+      outline-offset: 3px;
+    }
+  }
 }
 
 .about-us--item-image {

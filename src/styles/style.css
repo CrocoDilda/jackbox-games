@@ -8,7 +8,6 @@ body {
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
   background-color: #181c23;
-  height: 500vh;
 }
 
 .container {
@@ -20,9 +19,13 @@ body {
   color: #e7eaee;
 }
 *:focus-visible {
-  background-color: bisque;
-  outline: 3px solid red;
+  outline: 3px solid white !important;
   outline-offset: 3px;
+}
+
+a,
+button {
+  border-radius: 6px;
 }
 
 .bg-header {
@@ -402,6 +405,10 @@ body {
 .hero .slider .video-content--link {
   display: flex;
   justify-content: center;
+  transition: transform 0.2s;
+}
+.hero .slider .video-content--link:hover {
+  transform: scale(1.05);
 }
 .hero .slider .video-content--Logo {
   width: 60%;
@@ -489,6 +496,15 @@ body {
 .about-us--item:hover {
   transform: scale(1.05);
   outline: 2px solid white;
+}
+.about-us--item a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.about-us--item a:focus-visible {
+  border: 3px solid white !important;
+  outline-offset: 3px;
 }
 
 .about-us--item-image {
@@ -607,4 +623,79 @@ body {
 }
 .shop .shop--link-bottom:hover {
   transform: scale(1.05);
+}
+
+.possibilities {
+  display: flex;
+  background: radial-gradient(76.37% 50% at 50% 50%, #419544 28.89%, #276829 100%);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.possibilities .possibilities--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 100px 80px;
+  height: 100%;
+  width: 50%;
+}
+.possibilities .possibilities--title {
+  text-align: left;
+}
+.possibilities .possibilities--subtitle {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+}
+.possibilities .possibilities--text {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+.possibilities .possibilities--list {
+  display: flex;
+  width: 100%;
+  padding-bottom: 32px;
+}
+.possibilities .possibilities--item {
+  width: 100%;
+}
+.possibilities .possibilities--link {
+  width: 100%;
+}
+.possibilities .possibilities--icon {
+  transition: transform 0.2s;
+}
+.possibilities .possibilities--icon:hover {
+  transform: scale(1.2);
+}
+.possibilities .possibilities--form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.possibilities .possibilities--label {
+  background-color: white;
+  border-radius: 6px;
+  width: 100%;
+}
+.possibilities .possibilities--input {
+  padding-left: 25px;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+  border-radius: 6px;
+}
+.possibilities .possibilities--submit {
+  margin-top: 16px;
+  padding: 15px 21px;
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 1.125rem;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.possibilities .possibilities--submit:hover {
+  background: white;
+  color: black;
 }/*# sourceMappingURL=style.css.map */

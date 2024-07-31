@@ -207,6 +207,10 @@
     .video-content--link {
       display: flex;
       justify-content: center;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     .video-content--Logo {

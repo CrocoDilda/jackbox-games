@@ -1,0 +1,105 @@
+.possibilities {
+  display: flex;
+  background: radial-gradient(
+    76.37% 50% at 50% 50%,
+    #419544 28.89%,
+    #276829 100%
+  );
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .possibilities--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 100px 80px;
+    height: 100%;
+    width: 50%;
+  }
+
+  .possibilities--title {
+    text-align: left;
+  }
+
+  .possibilities--subtitle {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 20px;
+  }
+
+  .possibilities--text {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .possibilities--list {
+    display: flex;
+    width: 100%;
+    padding-bottom: 32px;
+  }
+
+  .possibilities--item {
+    width: 100%;
+  }
+
+  .possibilities--link {
+    width: 100%;
+  }
+
+  .possibilities--icon {
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .possibilities--link {
+  }
+
+  .possibilities--icon {
+  }
+
+  .possibilities--form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .possibilities--label {
+    background-color: white;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .possibilities--input {
+    padding-left: 25px;
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border-radius: 6px;
+  }
+
+  .possibilities--submit {
+    margin-top: 16px;
+    padding: 15px 21px;
+    border: 2px solid white;
+    background-color: transparent;
+    font-size: 1.125rem;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  .possibilities--images-wrapper {
+  }
+
+  .possibilities--image-man {
+  }
+
+  .possibilities--image-peoples {
+  }
+}
