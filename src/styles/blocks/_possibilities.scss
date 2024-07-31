@@ -53,12 +53,6 @@
     }
   }
 
-  .possibilities--link {
-  }
-
-  .possibilities--icon {
-  }
-
   .possibilities--form {
     display: flex;
     flex-direction: column;
@@ -87,19 +81,14 @@
     background-color: transparent;
     font-size: 1.125rem;
     border-radius: 6px;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
     &:hover {
       background: white;
       color: black;
     }
-  }
-
-  .possibilities--images-wrapper {
-  }
-
-  .possibilities--image-man {
-  }
-
-  .possibilities--image-peoples {
+    &:active {
+      background-color: $active-color;
+      border-color: $active-color;
+    }
   }
 }

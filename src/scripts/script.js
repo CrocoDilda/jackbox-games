@@ -5,6 +5,7 @@ const wrapper = document.querySelector("[data-wrapper]")
 const buttonBack = document.querySelector("[data-back]")
 const buttonForward = document.querySelector("[data-forward]")
 const pointsWrapper = document.querySelector("[data-points-list]")
+const questionsList = document.querySelector("[data-list")
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40)
@@ -39,6 +40,31 @@ buttonForward.addEventListener("click", () => {
   quantityImage++
   disabledButton()
   activePoint(quantityImage - 1, true)
+})
+
+// слушатель на список вопросов секции questions
+questionsList.addEventListener("click", (event) => {
+  const targetAttr = event.target.parentElement
+
+  if (targetAttr.attributes[0].name == "data-question") {
+    const questionText = targetAttr.parentElement.children[1]
+    console.dir(targetAttr.children[2])
+    if (questionText.attributes[0].value == 0) {
+      targetAttr.children[2].classList.add("icon-rotate")
+      questionText.classList.add("questions--text-active")
+      questionText.classList.remove("questions--text-hidden")
+      questionText.style.display = "block"
+      questionText.attributes[0].value = 1
+    } else {
+      targetAttr.children[2].classList.remove("icon-rotate")
+      questionText.classList.add("questions--text-hidden")
+      questionText.classList.remove("questions--text-active")
+      setTimeout(() => {
+        questionText.style.display = "none"
+      }, 400)
+      questionText.attributes[0].value = 0
+    }
+  }
 })
 
 // функция отключения кнопок

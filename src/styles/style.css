@@ -136,6 +136,32 @@ button {
     opacity: 1;
   }
 }
+@keyframes question-hidden {
+  0% {
+    height: auto;
+    color: white;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes question-active {
+  0% {
+    height: 0;
+    color: transparent;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+    color: white;
+    padding: 0;
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -226,6 +252,11 @@ button {
 
 .scrolled::before {
   opacity: 1;
+}
+
+.footer {
+  background: black;
+  padding: 80px 0;
 }
 
 .hero .hero--wrapper {
@@ -693,9 +724,100 @@ button {
   background-color: transparent;
   font-size: 1.125rem;
   border-radius: 6px;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 .possibilities .possibilities--submit:hover {
   background: white;
   color: black;
+}
+.possibilities .possibilities--submit:active {
+  background-color: #ff7efa;
+  border-color: #ff7efa;
+}
+
+.questions {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: start;
+  grid-template-columns: auto 1fr;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.questions .questions--image {
+  padding: 0 80px;
+}
+.questions .questions--wrapper {
+  padding: 0 80px;
+  max-width: 750px;
+  justify-self: end;
+}
+.questions .questions--supertitle {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  margin-bottom: 5px;
+}
+.questions .questions--subtitle {
+  font-family: Inter;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 18px;
+}
+.questions .questions--button {
+  position: relative;
+  display: flex;
+  padding: 24px 16px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid var(--tinted-neutral-500, #64748b);
+  background: var(--surface-50, #3a3c43);
+}
+.questions .questions--button .questions--button-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.questions .questions--button-icon {
+  height: 16px;
+  width: 16px;
+  transition: transform 0.3s;
+}
+.questions .questions--button-icon img {
+  height: 100%;
+  width: 100%;
+}
+.questions .icon-rotate {
+  transform: rotate(45deg);
+}
+.questions .questions--text {
+  display: none;
+  height: 0;
+  color: transparent;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.questions .questions--text-active {
+  animation-name: question-active;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.questions .questions--text-hidden {
+  animation-name: question-hidden;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.footer {
+  background: black;
+  padding: 80px 0;
 }/*# sourceMappingURL=style.css.map */
