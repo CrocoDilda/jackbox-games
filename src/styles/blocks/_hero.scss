@@ -218,5 +218,32 @@
       background: linear-gradient(180deg, #c4cbff 0%, #8f9cff 100%);
       justify-content: center;
     }
+    .content--link-wrapper {
+      display: flex;
+      width: 70%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .content--item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .content--link {
+      height: 28px;
+      width: 28px;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
+    .content--icon {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
