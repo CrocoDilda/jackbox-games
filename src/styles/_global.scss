@@ -1,8 +1,11 @@
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
+  width: 100vw;
   font-family: "Inter";
   overflow-x: hidden;
   background: url(../images/homepage/sparkle-bg.png);
@@ -29,7 +32,7 @@ button {
 }
 
 .bg-header {
-  width: 100%;
+  width: 100vw;
   height: 88px;
   background: linear-gradient(
     180deg,

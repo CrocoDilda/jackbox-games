@@ -6,6 +6,7 @@ const buttonBack = document.querySelector("[data-back]")
 const buttonForward = document.querySelector("[data-forward]")
 const pointsWrapper = document.querySelector("[data-points-list]")
 const questionsList = document.querySelector("[data-list")
+const burger = document.querySelector("[data-burger]")
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40)
@@ -40,6 +41,17 @@ buttonForward.addEventListener("click", () => {
   quantityImage++
   disabledButton()
   activePoint(quantityImage - 1, true)
+})
+
+// слушатель на бургер хэдера
+burger.addEventListener("click", () => {
+  if (burger.attributes[0].value == 1) {
+    burger.parentElement.children[1].style.display = "none"
+    burger.attributes[0].value = 0
+  } else {
+    burger.parentElement.children[1].style.display = "block"
+    burger.attributes[0].value = 1
+  }
 })
 
 // слушатель на список вопросов секции questions

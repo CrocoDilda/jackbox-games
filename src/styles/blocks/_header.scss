@@ -3,14 +3,37 @@
   top: 0;
   left: 0;
   width: 100vw;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: space-between;
+  justify-items: stretch;
   align-items: center;
   height: 88px;
-  padding: 16px 60px 16px 80px;
   transition: 0.4s;
   background: linear-gradient(180deg, #00000000 0%, #00000000 100%);
   z-index: 100;
+
+  .header--burger {
+    display: none;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+  }
+
+  .header--burger-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header--burger-line {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+  }
 
   &::before {
     content: "";
@@ -30,16 +53,22 @@
   }
 
   .header--nav {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    padding: 16px 60px 16px 80px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-auto-flow: column;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 100vw;
+    gap: 8px;
   }
 
   .header--logo {
-    height: 100%;
-    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 40px;
     fill: white;
     border-radius: 8px;
     transition: fill 0.2s;
@@ -52,11 +81,13 @@
   }
 
   .header--logo-icon {
-    height: 100%;
     max-width: 108px;
+    height: 40px;
   }
 
   .header--list {
+    justify-self: end;
+    justify-content: end;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -64,6 +95,7 @@
 
   .header--item {
     color: white;
+    white-space: nowrap;
   }
 
   .header--link {
@@ -80,6 +112,7 @@
   }
 
   .header--button {
+    width: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
