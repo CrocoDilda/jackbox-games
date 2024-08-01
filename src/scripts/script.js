@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
 })
 
 let quantityImage = 1 // переменная счётчик, которая увеличивается до размера массива
-let stepWidth = wrapper.scrollWidth / wrapper.children.length
+
 let sliderPosition = wrapper.scrollWidth
 
 for (let i = 0; i < wrapper.children.length; i++) {
@@ -29,6 +29,7 @@ quantityImage == 1
   : (buttonBack.disabled = false)
 
 buttonBack.addEventListener("click", () => {
+  const stepWidth = wrapper.scrollWidth / wrapper.children.length
   wrapper.style.left = `${-(sliderPosition -= stepWidth)}px`
   quantityImage--
   disabledButton()
@@ -36,6 +37,7 @@ buttonBack.addEventListener("click", () => {
 })
 
 buttonForward.addEventListener("click", () => {
+  const stepWidth = wrapper.scrollWidth / wrapper.children.length
   sliderPosition = stepWidth * quantityImage
   wrapper.style.left = `${-sliderPosition}px`
   quantityImage++

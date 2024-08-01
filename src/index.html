@@ -50,23 +50,34 @@
       <section class="hero">
         <div class="hero--wrapper">
           <a href="#" class="hero--link">
-            <p class="hero--title">New Game Announcement !!!</p>
+            <p class="hero--title">
+              <span>New Game </span> <span>Announcement !!!</span>
+            </p>
             <img
               src="./images/afterdark/logo.png"
               alt="jackbox"
               class="hero--image"
             />
-            <p class="hero--title">Spicy Details Inside !!!</p>
+            <p class="hero--title">
+              <span>Spicy Details</span> <span>Inside !!!</span>
+            </p>
           </a>
         </div>
         <div id="slider" data-slider class="slider">
           <ul data-wrapper class="slider--wrapper">
             <li class="slider--item">
-              <img
-                src="./images/homepage/bus.webp"
-                alt=""
-                class="slider--item-background"
-              />
+              <picture>
+                <source
+                  srcset="./images/homepage/bus.webp"
+                  media="(min-width: 601px)"
+                />
+                <img
+                  src="./images/homepage/bus-mobile.webp"
+                  alt="Картинка с размерами"
+                  class="slider--item-background"
+                />
+              </picture>
+
               <div class="slider--item-filter">
                 <div class="content">
                   <img
@@ -109,7 +120,7 @@
 
             <li class="slider--item">
               <video
-                class="slider--item-background"
+                class="slider--item-background slider--item-background-video"
                 loop=""
                 autoplay=""
                 playsinline=""
@@ -120,6 +131,12 @@
                   class="cz-color-0"
                 />
               </video>
+
+              <img
+                src="./images/homepage/bath.webp"
+                alt=""
+                class="slider--item-background slider--item-background-image"
+              />
               <div class="slider--item-filter">
                 <div class="content">
                   <a class="video-content--link" href="#">

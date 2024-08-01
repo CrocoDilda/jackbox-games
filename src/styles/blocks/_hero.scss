@@ -1,4 +1,6 @@
 .hero {
+  display: grid;
+
   .hero--wrapper {
     width: 100vw;
     padding: 12px 80px;
@@ -21,10 +23,13 @@
   }
 
   .hero--title {
-    color: #ff7efa;
-    font-family: Tilt Neon, Comic Sans, sans-serif;
-    font-size: 1.625rem;
-    text-shadow: 0 0 7px #d13acc;
+    & span {
+      color: #ff7efa;
+      font-family: Tilt Neon, Comic Sans, sans-serif;
+      font-size: 1.625rem;
+      text-shadow: 0 0 7px #d13acc;
+      white-space: nowrap;
+    }
     animation: blinking 5.5s infinite;
     &:first-child {
       justify-self: end;
@@ -39,6 +44,7 @@
     width: 100%;
     max-width: 290px;
     animation: blinking 6.5s infinite;
+    min-width: 200px;
   }
 
   .slider {
@@ -46,7 +52,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    padding: 0 0 70px 100px;
+    padding: 0 0 70px 6vw;
     margin-top: 30px;
 
     .slider--wrapper {
@@ -70,6 +76,8 @@
     }
 
     .slider--item-filter {
+      display: grid;
+      justify-content: start;
       position: absolute;
       top: 0;
       left: 0;
@@ -81,11 +89,16 @@
         rgba(0, 0, 0, 0.12) 45.55%,
         rgba(0, 0, 0, 0) 100%
       );
+      z-index: 1;
     }
 
     .slider--item-background {
       width: 100%;
       z-index: 2;
+    }
+
+    .slider--item-background-image {
+      display: none;
     }
 
     .slider--inner {
@@ -149,24 +162,27 @@
     }
 
     .content {
-      position: absolute;
-      top: 0;
-      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 10px;
-      width: 40%;
+      margin-left: 50px;
+      width: 100%;
+      max-width: 320px;
       height: 100%;
       font-size: 0.75rem;
       z-index: 10;
     }
 
+    .content--logo {
+      width: 100%;
+    }
+
     .content--text {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      width: 100%;
     }
 
     .cursive {
@@ -176,7 +192,7 @@
     .content--button {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      width: 100%;
       background: linear-gradient(90deg, #fad000 0%, #fff478 100%);
       font-weight: 800;
       text-transform: uppercase;
@@ -224,7 +240,7 @@
     }
     .content--link-wrapper {
       display: flex;
-      width: 70%;
+      width: 100%;
       justify-content: space-between;
       margin-top: 10px;
     }
