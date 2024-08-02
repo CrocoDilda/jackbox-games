@@ -1,7 +1,8 @@
 .about-us {
+  position: relative;
   display: grid;
-  grid-auto-flow: column;
   grid-template-columns: 40% 1fr;
+  height: 100%;
 }
 
 .about-us--image-wrapper {
@@ -34,10 +35,11 @@
   }
 }
 
-.about-us--innet {
+.about-us--inner {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, auto);
   gap: 20px;
+  width: 100%;
 }
 
 .about-us--item {
@@ -45,7 +47,7 @@
   box-shadow: 0 1px 7px #0000001a, 0 4px 5px -1px #0000001f,
     0 10px 15px -5px #0003;
   height: auto;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   transition: transform 0.2s;
   &:hover {
