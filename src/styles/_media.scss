@@ -1,3 +1,11 @@
+@media (hover: none) {
+  *:hover {
+    outline: solid 3px var(--primary-50);
+    outline-offset: -1.5px;
+    transform: scale(1.05);
+  }
+}
+
 @media (max-width: calc($container - 50px)) {
   .container {
     padding-left: 25px;
@@ -76,6 +84,23 @@
     .about-us--wrapper {
       padding: 20px !important;
       margin-top: 50px;
+    }
+  }
+
+  .events {
+    .events--wrapper {
+      padding: 80px 44px !important;
+      .events--title b {
+        font-size: 2rem;
+      }
+
+      .events--list {
+        .event--item {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
@@ -163,6 +188,37 @@
         & .title b {
           font-size: 1.75rem !important;
         }
+      }
+    }
+  }
+
+  .events {
+    .events--wrapper {
+      padding: 80px 16px !important;
+
+      .events--supertitle {
+        text-align: center;
+        width: 100%;
+      }
+
+      .events--title {
+        text-align: center;
+      }
+      .events--list {
+        flex-direction: column;
+        .event--item {
+          &:nth-child(3) {
+            display: none;
+          }
+          .event--item-link {
+            padding: 10px;
+            gap: 10px;
+          }
+        }
+      }
+      .event--button {
+        margin: 0 auto;
+        margin-top: 30px;
       }
     }
   }

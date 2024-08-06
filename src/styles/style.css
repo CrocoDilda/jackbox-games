@@ -162,6 +162,13 @@ button {
     padding: 0;
   }
 }
+@media (hover: none) {
+  *:hover {
+    outline: solid 3px var(--primary-50);
+    outline-offset: -1.5px;
+    transform: scale(1.05);
+  }
+}
 @media (max-width: 1350px) {
   .container {
     padding-left: 25px;
@@ -225,6 +232,15 @@ button {
   .about-us .about-us--wrapper {
     padding: 20px !important;
     margin-top: 50px;
+  }
+  .events .events--wrapper {
+    padding: 80px 44px !important;
+  }
+  .events .events--wrapper .events--title b {
+    font-size: 2rem;
+  }
+  .events .events--wrapper .events--list .event--item:last-child {
+    display: none;
   }
 }
 @media (max-width: 600px) {
@@ -298,6 +314,30 @@ button {
   }
   .about-us .about-us--wrapper .about-us--title-wrapper .title b {
     font-size: 1.75rem !important;
+  }
+  .events .events--wrapper {
+    padding: 80px 16px !important;
+  }
+  .events .events--wrapper .events--supertitle {
+    text-align: center;
+    width: 100%;
+  }
+  .events .events--wrapper .events--title {
+    text-align: center;
+  }
+  .events .events--wrapper .events--list {
+    flex-direction: column;
+  }
+  .events .events--wrapper .events--list .event--item:nth-child(3) {
+    display: none;
+  }
+  .events .events--wrapper .events--list .event--item .event--item-link {
+    padding: 10px;
+    gap: 10px;
+  }
+  .events .events--wrapper .event--button {
+    margin: 0 auto;
+    margin-top: 30px;
   }
 }
 @media (max-width: 410px) {
@@ -803,7 +843,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 10px;
 }
 .events .event--item {
   width: 100%;
