@@ -14,7 +14,7 @@ window.addEventListener("scroll", () => {
 
 let quantityImage = 1 // переменная счётчик, которая увеличивается до размера массива
 
-let sliderPosition = wrapper.scrollWidth
+let sliderPosition = wrapper.scrollWidth // переменная позиции слайдера
 
 for (let i = 0; i < wrapper.children.length; i++) {
   if (!i) {
