@@ -11,6 +11,12 @@
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  .questions {
+    .questions--wrapper {
+      padding: 0px;
+    }
+  }
 }
 
 @media (min-width: 961px) {
@@ -22,6 +28,10 @@
 @media (max-width: 960px) {
   html {
     scroll-padding-top: 60px;
+  }
+
+  .title {
+    font-size: 32px;
   }
 
   .bg-header {
@@ -123,15 +133,26 @@
     .possibilities--wrapper {
       max-width: 602px;
       padding: 0px;
+    }
+  }
 
-      .possibilities--title {
-        font-size: 32px;
-      }
+  .questions {
+    grid-template-columns: 1fr 2fr;
+    gap: 5vw;
+    .questions--image {
+      padding: 0px;
+      width: 100%;
+      height: auto;
     }
   }
 }
 
 @media (max-width: 600px) {
+  .title {
+    font-size: 28px;
+    text-align: center;
+  }
+
   .hero {
     grid-template-rows: 1fr auto;
 
@@ -303,6 +324,28 @@
       .possibilities--title {
         text-align: center;
       }
+    }
+  }
+
+  .questions {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    .questions--iamge-wrapper {
+      position: relative;
+      height: 350px;
+      width: 100%;
+      overflow: hidden;
+
+      .questions--image {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 125px);
+        width: 250px;
+      }
+    }
+
+    .questions--supertitle {
+      text-align: center;
     }
   }
 }
