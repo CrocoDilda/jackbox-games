@@ -103,6 +103,17 @@
       }
     }
   }
+
+  .shop {
+    .shop--wrapper {
+      padding: 100px 40px !important;
+      .shop--list {
+        gap: 4vw;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -219,6 +230,50 @@
       .event--button {
         margin: 0 auto;
         margin-top: 30px;
+      }
+    }
+  }
+
+  .shop {
+    .shop--wrapper {
+      position: relative;
+      padding: 40px 15px !important;
+
+      .shop--title {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .shop--list-wrapper {
+        position: relative;
+        height: 150px;
+        overflow-x: scroll;
+        width: 100vw;
+        margin: 15px 0;
+        &::-webkit-scrollbar {
+          width: 0; /* ширина всей полосы прокрутки */
+        }
+        scrollbar-width: none;
+
+        .shop--list {
+          position: absolute;
+          top: 0;
+          left: 250px;
+          display: flex;
+          gap: 20px;
+          height: 100%;
+          width: auto !important;
+          padding: 15px 0;
+          .shop--item {
+            &:last-child {
+              margin-right: 20px;
+            }
+            .shop--image {
+              height: 120px;
+              width: auto;
+            }
+          }
+        }
       }
     }
   }

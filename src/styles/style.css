@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -242,6 +243,14 @@ button {
   .events .events--wrapper .events--list .event--item:last-child {
     display: none;
   }
+  .shop .shop--wrapper {
+    padding: 100px 40px !important;
+  }
+  .shop .shop--wrapper .shop--list {
+    gap: 4vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media (max-width: 600px) {
   .hero {
@@ -338,6 +347,42 @@ button {
   .events .events--wrapper .event--button {
     margin: 0 auto;
     margin-top: 30px;
+  }
+  .shop .shop--wrapper {
+    position: relative;
+    padding: 40px 15px !important;
+  }
+  .shop .shop--wrapper .shop--title {
+    font-size: 28px;
+    text-align: center;
+  }
+  .shop .shop--wrapper .shop--list-wrapper {
+    position: relative;
+    height: 150px;
+    overflow-x: scroll;
+    width: 100vw;
+    margin: 15px 0;
+    scrollbar-width: none;
+  }
+  .shop .shop--wrapper .shop--list-wrapper::-webkit-scrollbar {
+    width: 0; /* ширина всей полосы прокрутки */
+  }
+  .shop .shop--wrapper .shop--list-wrapper .shop--list {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    width: auto !important;
+    padding: 15px 0;
+  }
+  .shop .shop--wrapper .shop--list-wrapper .shop--list .shop--item:last-child {
+    margin-right: 20px;
+  }
+  .shop .shop--wrapper .shop--list-wrapper .shop--list .shop--item .shop--image {
+    height: 120px;
+    width: auto;
   }
 }
 @media (max-width: 410px) {
