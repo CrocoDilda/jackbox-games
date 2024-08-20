@@ -145,6 +145,28 @@
       height: auto;
     }
   }
+
+  .footer {
+    .footer--top {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer--bottom {
+      flex-direction: column;
+      gap: 15px;
+
+      .footer--text {
+        font-size: 12px;
+      }
+
+      .footer--wrapper {
+        .footer--link {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -345,6 +367,13 @@
     }
 
     .questions--supertitle {
+      text-align: center;
+    }
+  }
+
+  .footer {
+    padding: 32px 16px;
+    .footer--text {
       text-align: center;
     }
   }
