@@ -1,5 +1,8 @@
 .possibilities {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 50%;
+  justify-content: center;
   background: radial-gradient(
     76.37% 50% at 50% 50%,
     #419544 28.89%,
@@ -11,14 +14,16 @@
   .possibilities--wrapper {
     display: flex;
     flex-direction: column;
+    align-self: start;
     align-items: start;
     padding: 100px 80px;
     height: 100%;
-    width: 50%;
+    width: 100%;
   }
 
   .possibilities--title {
     text-align: left;
+    word-break: break-word;
   }
 
   .possibilities--subtitle {
@@ -90,5 +95,22 @@
       background-color: $active-color;
       border-color: $active-color;
     }
+  }
+
+  .possibilities--images-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+  }
+
+  .possibilities--image-man {
+    width: 30%;
+    height: auto;
+  }
+
+  .possibilities--image-peoples {
+    width: 68%;
+    height: auto;
   }
 }

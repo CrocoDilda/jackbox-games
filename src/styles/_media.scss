@@ -114,6 +114,21 @@
       }
     }
   }
+
+  .possibilities {
+    grid-template-columns: 1fr 60%;
+    gap: 20px;
+    padding-left: 16px !important;
+    padding-right: 0px !important;
+    .possibilities--wrapper {
+      max-width: 602px;
+      padding: 0px;
+
+      .possibilities--title {
+        font-size: 32px;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -277,10 +292,45 @@
       }
     }
   }
+
+  .possibilities {
+    flex-direction: row;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 50px 20px !important;
+
+    .possibilities--wrapper {
+      .possibilities--title {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media (max-width: 410px) {
+  .hero {
+    .slider {
+      .content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .content--icon {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
   .about-us {
     padding-top: 140px;
+  }
+
+  .possibilities {
+    .possibilities--wrapper {
+      .possibilities--title {
+        font-size: 28px;
+      }
+    }
   }
 }
