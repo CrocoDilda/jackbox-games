@@ -3,7 +3,6 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-  overflow-x: hidden;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   font-family: "Inter";
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-color: #181c23;
   overflow-x: hidden;
 }
@@ -32,6 +31,12 @@ body {
 a,
 button {
   border-radius: 6px;
+  transition: background-color 0.05s;
+}
+a:active,
+button:active {
+  background-color: #fff !important;
+  color: black;
 }
 
 .bg-header {
@@ -179,6 +184,22 @@ button {
   }
   100% {
     left: 0;
+  }
+}
+@keyframes cookie-hidden {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+@keyframes cookie-active {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0%;
   }
 }
 .header {
@@ -787,6 +808,7 @@ button {
   background: radial-gradient(76.37% 50% at 50% 50%, #419544 28.89%, #276829 100%);
   padding-top: 50px;
   padding-bottom: 50px;
+  overflow-x: hidden;
 }
 .possibilities .possibilities--wrapper {
   display: flex;
@@ -1030,6 +1052,65 @@ button {
   transform: scale(1.1);
 }
 
+.cookie {
+  position: fixed;
+  bottom: 0%;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  min-height: 75px;
+  background-color: #191d23;
+  width: 100vw;
+  padding: 20px;
+  z-index: 100;
+  transition: 0.2s;
+}
+.cookie .cookie--text {
+  color: white;
+  font-size: 14px;
+}
+.cookie .cookie--text .cookie--link {
+  font-weight: 700;
+  transition: 0.2s;
+}
+.cookie .cookie--text .cookie--link:hover {
+  color: #3f55fe;
+}
+.cookie .cookie--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cookie .cookie--wrapper .cookie--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323a46;
+  white-space: nowrap;
+  padding: 10px 26px;
+  transition: background-color 0.2s;
+}
+.cookie .cookie--wrapper .cookie--button:hover {
+  background-color: #3f55fe;
+  outline: 2px solid white;
+}
+
+.cookie--active {
+  animation-name: cookie-active;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.cookie--hidden {
+  animation-name: cookie-hidden;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
 @media (hover: none) {
   *:hover {
     outline: solid 3px var(--primary-50);
@@ -1162,6 +1243,29 @@ button {
   .title {
     font-size: 28px;
     text-align: center;
+  }
+  .cookie {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cookie .cookie--wrapper {
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+  }
+  .cookie .cookie--wrapper::before {
+    content: "";
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  .cookie .cookie--wrapper .cookie--button {
+    width: 100%;
   }
   .hero {
     grid-template-rows: 1fr auto;

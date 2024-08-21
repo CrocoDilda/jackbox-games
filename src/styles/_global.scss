@@ -2,7 +2,6 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-  overflow-x: hidden;
 }
 
 body {
@@ -10,7 +9,7 @@ body {
   font-family: "Inter";
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-color: #181c23;
   overflow-x: hidden;
 }
@@ -31,6 +30,12 @@ body {
 a,
 button {
   border-radius: 6px;
+  transition: background-color 0.05s;
+
+  &:active {
+    background-color: #fff !important;
+    color: black;
+  }
 }
 
 .bg-header {

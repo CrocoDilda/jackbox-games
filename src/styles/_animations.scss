@@ -121,3 +121,23 @@
     left: 0;
   }
 }
+
+@keyframes cookie-hidden {
+  0% {
+    bottom: 0%;
+  }
+
+  100% {
+    bottom: -100%;
+  }
+}
+
+@keyframes cookie-active {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}

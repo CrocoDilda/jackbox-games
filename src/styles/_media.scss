@@ -175,6 +175,32 @@
     text-align: center;
   }
 
+  .cookie {
+    flex-direction: column;
+    gap: 20px;
+    .cookie--wrapper {
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+
+      &::before {
+        content: "";
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        margin-bottom: 15px;
+      }
+
+      .cookie--button {
+        width: 100%;
+      }
+    }
+  }
+
   .hero {
     grid-template-rows: 1fr auto;
 

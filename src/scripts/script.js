@@ -8,6 +8,7 @@ const pointsWrapper = document.querySelector("[data-points-list]")
 const questionsList = document.querySelector("[data-list")
 const burger = document.querySelector("[data-burger]")
 const animatedImages = document.querySelectorAll("[data-animation]")
+const cookies = document.querySelector("[data-cookies]")
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40)
@@ -28,6 +29,24 @@ for (let i = 0; i < wrapper.children.length; i++) {
 quantityImage == 1
   ? (buttonBack.disabled = true)
   : (buttonBack.disabled = false)
+
+//  Cookies
+if (!window.localStorage.getItem("cookies")) {
+  cookies.classList.add("cookie--active")
+}
+
+cookies.addEventListener("click", (e) => {
+  if (e.target.attributes[0].name == "data-cookies-button") {
+    console.log()
+    if (!!+e.target.attributes[0].value) {
+      window.localStorage.setItem("cookies", "Yes! Use my cookies!")
+    } else {
+      window.localStorage.setItem("cookies", "Don't touch my cookies!")
+    }
+    cookies.classList.remove("cookie--active")
+    cookies.classList.add("cookie--hidden")
+  }
+})
 
 buttonBack.addEventListener("click", () => {
   const stepWidth = wrapper.scrollWidth / wrapper.children.length
