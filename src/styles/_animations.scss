@@ -101,3 +101,23 @@
     padding: 0;
   }
 }
+
+@keyframes surfacing-y {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes surfacing-x {
+  0% {
+    left: 150%;
+  }
+
+  100% {
+    left: 0;
+  }
+}

@@ -7,6 +7,7 @@ const buttonForward = document.querySelector("[data-forward]")
 const pointsWrapper = document.querySelector("[data-points-list]")
 const questionsList = document.querySelector("[data-list")
 const burger = document.querySelector("[data-burger]")
+const animatedImages = document.querySelectorAll("[data-animation]")
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40)
@@ -100,3 +101,23 @@ function activePoint(index, operator) {
   point.classList.add("slider--point-active")
   previousPoint.classList.remove("slider--point-active")
 }
+
+const callback = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const classElement = entry.target.attributes[0].value
+      entry.target.children[0].classList.add(classElement)
+    }
+  })
+}
+
+const options = {
+  // root: по умолчанию window,
+  // но можно задать любой элемент-контейнер
+  rootMargin: "0px 0px -150px 0px",
+  threshold: 0,
+}
+
+const observer = new IntersectionObserver(callback, options)
+
+animatedImages.forEach((image) => observer.observe(image))

@@ -2,15 +2,17 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  overflow-x: hidden;
 }
 
 body {
   width: 100vw;
   font-family: "Inter";
-  overflow-x: hidden;
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
+  background-repeat: repeat-y;
   background-color: #181c23;
+  overflow-x: hidden;
 }
 
 .container {

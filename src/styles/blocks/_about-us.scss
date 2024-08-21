@@ -12,10 +12,18 @@
 
 .about-us--image {
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   width: 100%;
   max-width: 600px;
+  z-index: -1;
+}
+
+.about-us--animated {
+  animation-name: surfacing-y;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .about-us--wrapper {

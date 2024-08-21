@@ -3,15 +3,17 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  overflow-x: hidden;
 }
 
 body {
   width: 100vw;
   font-family: "Inter";
-  overflow-x: hidden;
   background: url(../images/homepage/sparkle-bg.png);
   background-attachment: fixed;
+  background-repeat: repeat-y;
   background-color: #181c23;
+  overflow-x: hidden;
 }
 
 .container {
@@ -161,6 +163,22 @@ button {
     height: 100%;
     color: white;
     padding: 0;
+  }
+}
+@keyframes surfacing-y {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes surfacing-x {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: 0;
   }
 }
 .header {
@@ -584,10 +602,18 @@ button {
 
 .about-us--image {
   position: absolute;
-  top: 0;
+  top: 100%;
   left: 0;
   width: 100%;
   max-width: 600px;
+  z-index: -1;
+}
+
+.about-us--animated {
+  animation-name: surfacing-y;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .about-us--wrapper {
@@ -846,9 +872,21 @@ button {
   width: 30%;
   height: auto;
 }
-.possibilities .possibilities--image-peoples {
+.possibilities .possibilities--peoples-wrapper {
   width: 68%;
+}
+.possibilities .possibilities--image-peoples {
+  position: relative;
+  top: 0;
+  left: 150%;
+  width: 100%;
   height: auto;
+}
+.possibilities .possibilities--animated {
+  animation-name: surfacing-x;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .questions {
