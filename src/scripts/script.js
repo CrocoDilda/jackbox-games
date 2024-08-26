@@ -31,8 +31,11 @@ quantityImage == 1
   : (buttonBack.disabled = false)
 
 //  Cookies
+
+console.log(!window.localStorage.getItem("cookies"))
 if (!window.localStorage.getItem("cookies")) {
   cookies.classList.add("cookie--active")
+  console.log("add active")
 }
 
 cookies.addEventListener("click", (e) => {

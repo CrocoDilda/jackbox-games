@@ -190,12 +190,18 @@ button:active {
   0% {
     bottom: 0%;
   }
-  100% {
+  99% {
     bottom: -100%;
+  }
+  100% {
+    display: none;
   }
 }
 @keyframes cookie-active {
   0% {
+    display: block;
+  }
+  1% {
     bottom: -100%;
   }
   100% {
@@ -1056,6 +1062,10 @@ button:active {
   position: fixed;
   bottom: 0%;
   left: 0;
+  display: none;
+  z-index: 100;
+}
+.cookie .cookie--wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1064,7 +1074,6 @@ button:active {
   background-color: #191d23;
   width: 100vw;
   padding: 20px;
-  z-index: 100;
   transition: 0.2s;
 }
 .cookie .cookie--text {
@@ -1078,12 +1087,12 @@ button:active {
 .cookie .cookie--text .cookie--link:hover {
   color: #3f55fe;
 }
-.cookie .cookie--wrapper {
+.cookie .cookie--inner {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.cookie .cookie--wrapper .cookie--button {
+.cookie .cookie--inner .cookie--button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1092,12 +1101,13 @@ button:active {
   padding: 10px 26px;
   transition: background-color 0.2s;
 }
-.cookie .cookie--wrapper .cookie--button:hover {
+.cookie .cookie--inner .cookie--button:hover {
   background-color: #3f55fe;
   outline: 2px solid white;
 }
 
 .cookie--active {
+  display: inherit;
   animation-name: cookie-active;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
