@@ -244,7 +244,7 @@
               </div>
             </li>
           </ul>
-          <a href="#slider" class="slider--inner">
+          <a tabindex="-1" href="#slider" class="slider--inner">
             <button data-back class="slider--button">
               <svg class="slider--icon">
                 <use href="./icons/system-icons/sprite-arrow.svg#arrow"></use>
@@ -589,12 +589,16 @@
           <form class="possibilities--form">
             <label class="possibilities--label">
               <input
+                data-input
                 placeholder="Email address"
                 type="email"
                 class="possibilities--input"
               />
             </label>
-            <button type="button" class="possibilities--submit">Submit</button>
+            <p data-error class="possibilities--error">Email is invalid!</p>
+            <button data-submit type="button" class="possibilities--submit">
+              Submit
+            </button>
           </form>
         </div>
         <div class="possibilities--images-wrapper">
@@ -811,6 +815,7 @@
         </div>
       </div>
     </footer>
-    <script src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/slider.js"></script>
   </body>
 </html>

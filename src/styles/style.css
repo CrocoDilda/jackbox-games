@@ -479,7 +479,14 @@ button:active {
   transform: translateX(-50%);
   gap: 20px;
   aspect-ratio: 2.2;
+  cursor: default;
   z-index: 2;
+}
+.hero .slider .slider--inner:focus-visible {
+  outline: 0 solid transparent !important;
+}
+.hero .slider .slider--inner:active {
+  background-color: transparent !important;
 }
 .hero .slider .slider--button {
   display: flex;
@@ -847,7 +854,9 @@ button:active {
   width: 100%;
 }
 .possibilities .possibilities--link {
-  width: 100%;
+  display: block;
+  width: 24px;
+  aspect-ratio: 1/1;
 }
 .possibilities .possibilities--icon {
   transition: transform 0.2s;
@@ -864,6 +873,13 @@ button:active {
   background-color: white;
   border-radius: 6px;
   width: 100%;
+}
+.possibilities .possibilities--error {
+  display: none;
+  font-size: 1rem;
+  color: red;
+  font-weight: 700;
+  margin-top: 10px;
 }
 .possibilities .possibilities--input {
   padding-left: 25px;

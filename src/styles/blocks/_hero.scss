@@ -111,7 +111,14 @@
       transform: translateX(-50%);
       gap: 20px;
       aspect-ratio: 2.2;
+      cursor: default;
       z-index: 2;
+      &:focus-visible {
+        outline: 0 solid transparent !important;
+      }
+      &:active {
+        background-color: transparent !important;
+      }
     }
 
     .slider--button {

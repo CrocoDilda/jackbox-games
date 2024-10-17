@@ -49,7 +49,9 @@
   }
 
   .possibilities--link {
-    width: 100%;
+    display: block;
+    width: 24px;
+    aspect-ratio: 1 / 1;
   }
 
   .possibilities--icon {
@@ -69,6 +71,14 @@
     background-color: white;
     border-radius: 6px;
     width: 100%;
+  }
+
+  .possibilities--error {
+    display: none;
+    font-size: 1rem;
+    color: red;
+    font-weight: 700;
+    margin-top: 10px;
   }
 
   .possibilities--input {
